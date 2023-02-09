@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='location_style.css') }}">
+    <title>Location</title>
+</head>
+<body>
+    <!-- NAVBAR-------------------------------------------------------------------------- -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/location"><b>Weather Now</b></a>
+        <div>
+            <a href="/logout" class="btn btn-dark btn-sm active" role="button" aria-pressed="true" id="logout">Logout</a>
+        </div>
+        </div>
+    </nav>
+    <!-- Searchbar------------------------------------------------------------------------------ -->
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-4 center d-inline-flex p-2">
+                <input class="form-control me-2" id="zip" type="text" placeholder="Enter Zip Code" aria-label="Search">
+                <a href="javascript:;" onClick="document.getElementById('hidden').style.display='flex'">
+                    <button class="btn btn-dark" onclick="findweather()">Forecast, Please!</button>   
+                </a>         
+            </div>
+
+        </div>  
+
+        <!-- Four Weather boxes displaying forecast---------------------------------------------------- -->
+        <div id="hidden" style="display:none">
+            
+            <div class="m-3 p-3 row border text-light rounded center bg-dark col-2 align-content-center">
+                <div>
+                    <text>Current Condtions:</text>
+                    <div class="col d-inline-flex align-items-center">
+                        <img id="icon_current" src=""></img>
+                        <div id="current_con"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="m-3 p-3 row border text-light rounded center bg-dark col-2 align-content-center">
+                <div>
+                    <text>Today's Forecast:</text>
+                    <div class="col d-inline-flex align-items-center">
+                        <img id="icon_zero" src=""></img>
+                        <div>
+                            <div id="forecast_zero_temp_max" class="text-danger"></div>
+                            <div id="forecast_zero_temp_min" class="text-primary"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="m-3 p-3 row border text-light rounded center bg-dark col-2 align-content-center">
+                <div>
+                    <text>Tomorrow's Forecast:</text>
+                    <div class="col d-inline-flex align-items-center">
+                        <img id="icon_one" src=""></img>
+                        <div>
+                            <div id="forecast_one_temp_max" class="text-danger"></div>
+                                <div id="forecast_one_temp_min" class="text-primary"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="m-3 p-3 row border text-light rounded center bg-dark col-2 align-content-center">
+                <div>
+                    <text>Day Two Forecast:</text>
+                    <div class="col d-inline-flex align-items-center">
+                        <img id="icon_two" src=""></img>
+                        <div>
+                            <div id="forecast_two_temp_max" class="text-danger"></div>
+                            <div id="forecast_two_temp_min" class="text-primary"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
