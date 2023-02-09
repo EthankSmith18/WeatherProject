@@ -1,2 +1,1 @@
-# deploy_flask
-# deploy_flask
+ A web based application allowing users to access current weather conditions and future forecasts for any zip code in the United States. Built with Python, Flask, Jinja2, Bcrypt, RegEx, MySQL, Bootstrap, CSS, AJAX, JSON, Trello, Figma and HTML.
