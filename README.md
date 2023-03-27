@@ -22,7 +22,7 @@
 
   </p>
   <div>
-    <h2>Some Images From my site !</h2>
+    <h2>Some Images From my site!</h2>
     <div>
       <img style="width: 200px;" src="https://i.imgur.com/kb2tQsk.jpg" alt="Login Page"/>
       <img style="width: 200px;" src="https://i.imgur.com/mhQrGW1.jpg" alt="Registration Page"/>
